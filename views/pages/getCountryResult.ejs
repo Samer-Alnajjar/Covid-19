@@ -3,12 +3,12 @@
   <%- include('../layout/head.ejs') %>
   <body>
     <%- include('../layout/header.ejs') %>
-
-    <div class="main">
+    <h1>Covid Statistics</h1>
+    <div class="main-allcountries">
       <% data.forEach( day => { %>
         <div class="card">
-          <h2>Date: <%= day.date%></h2>
-          <h2>Cases: <%= day.cases%></h2>
+          <h2 style ="color: rgb(216, 39, 216); font-weight: bolder;">Date: <%= day.date%></h2>
+          <h2 style="margin-top: 20px;">Number Of Confirmed Cases: <%= day.cases%></h2>
         </div>
       <%})%>
     </div>
