@@ -4,14 +4,21 @@
   <body>
     <%- include('../layout/header.ejs') %>
 
-    <div class="main">
-      <%data.forEach( day => { %>
-        <div class="card">
-          <h3>Country: <%= day.country%></h3>
-          <h3>Date: <%= day.date%></h3>
-          <a href="/RecordDetails/<%= day.id%>">View Details</a>
-        </div>
-      <%})%>
+    <h1>My Records</h1>
+    <div class="main-records">
+      <%if(data.length) { %>
+        <%data.forEach( day => { %>
+          <div class="card">
+            <h3 style ="color: rgb(216, 39, 216); font-weight: bolder;">Country: <%= day.country%></h3>
+            <h3>Date: <%= day.date%></h3>
+            <hr>
+            <a href="/RecordDetails/<%= day.id%>">View Details</a>
+          </div>
+        <%})%>
+      <%} else { %>
+        <h1 style="margin-left: 110%; width: 100%; color:rgb(216, 39, 216);">NO AVAILABLE RECORDS :(</h1>
+      <%}%>
+      
     </div>
     
 
