@@ -1,0 +1,28 @@
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
+  margin: 20px;
+  text-align: center;
+  background-color: cornflowerblue;
+  width: 35%;
+  margin: 0 auto;
+}
+
+
+.card{
+  background-color: bisque;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+nav {
+  text-align: center;
+  background-color: cadetblue;
+}
+
+footer {
+  text-align: center;
+  background-color: cadetblue;
+}
